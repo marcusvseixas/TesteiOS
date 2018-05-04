@@ -31,6 +31,10 @@
 		FF0CC563209A2A290042079C /* InvestimentoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CC553209A2A290042079C /* InvestimentoInteractor.swift */; };
 		FF0CC564209A2A290042079C /* InvestimentoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CC553209A2A290042079C /* InvestimentoInteractor.swift */; };
 		FF0CC565209A2A290042079C /* InvestimentoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CC553209A2A290042079C /* InvestimentoInteractor.swift */; };
+		FF8F17B8209CDC2F00CD5559 /* DINPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF8F17B7209CDC2E00CD5559 /* DINPro-Regular.otf */; };
+		FF8F17BA209CDE5400CD5559 /* DINPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF8F17B9209CDE5400CD5559 /* DINPro-Medium.otf */; };
+		FF8F17BE209CDEAA00CD5559 /* DINPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF8F17BC209CDEA900CD5559 /* DINPro-Bold.otf */; };
+		FF8F17BF209CDEAA00CD5559 /* DINPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF8F17BD209CDEA900CD5559 /* DINPro-Light.otf */; };
 		FFE4FE15209CA42700AB31D6 /* ContatoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE4FE0F209CA42700AB31D6 /* ContatoPresenter.swift */; };
 		FFE4FE16209CA42700AB31D6 /* ContatoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE4FE0F209CA42700AB31D6 /* ContatoPresenter.swift */; };
 		FFE4FE17209CA42700AB31D6 /* ContatoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE4FE0F209CA42700AB31D6 /* ContatoPresenter.swift */; };
@@ -87,6 +91,10 @@
 		FF0CC551209A2A290042079C /* InvestimentoModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestimentoModels.swift; sourceTree = "<group>"; };
 		FF0CC552209A2A290042079C /* InvestimentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestimentoViewController.swift; sourceTree = "<group>"; };
 		FF0CC553209A2A290042079C /* InvestimentoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestimentoInteractor.swift; sourceTree = "<group>"; };
+		FF8F17B7209CDC2E00CD5559 /* DINPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Regular.otf"; sourceTree = "<group>"; };
+		FF8F17B9209CDE5400CD5559 /* DINPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Medium.otf"; sourceTree = "<group>"; };
+		FF8F17BC209CDEA900CD5559 /* DINPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Bold.otf"; sourceTree = "<group>"; };
+		FF8F17BD209CDEA900CD5559 /* DINPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Light.otf"; sourceTree = "<group>"; };
 		FFE4FE0F209CA42700AB31D6 /* ContatoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoPresenter.swift; sourceTree = "<group>"; };
 		FFE4FE10209CA42700AB31D6 /* ContatoWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoWorker.swift; sourceTree = "<group>"; };
 		FFE4FE11209CA42700AB31D6 /* ContatoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoRouter.swift; sourceTree = "<group>"; };
@@ -143,6 +151,7 @@
 		FF0CC51C209A295E0042079C /* TesteiOS */ = {
 			isa = PBXGroup;
 			children = (
+				FF8F17BB209CDE5E00CD5559 /* fonts */,
 				FFE4FE0D209CA3D300AB31D6 /* Scenes */,
 				FF0CC51D209A295E0042079C /* AppDelegate.swift */,
 				FF0CC523209A295E0042079C /* Main.storyboard */,
@@ -182,6 +191,17 @@
 				FF0CC553209A2A290042079C /* InvestimentoInteractor.swift */,
 			);
 			path = Investimento;
+			sourceTree = "<group>";
+		};
+		FF8F17BB209CDE5E00CD5559 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FF8F17BC209CDEA900CD5559 /* DINPro-Bold.otf */,
+				FF8F17BD209CDEA900CD5559 /* DINPro-Light.otf */,
+				FF8F17B9209CDE5400CD5559 /* DINPro-Medium.otf */,
+				FF8F17B7209CDC2E00CD5559 /* DINPro-Regular.otf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		FFE4FE0D209CA3D300AB31D6 /* Scenes */ = {
@@ -313,6 +333,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF8F17BE209CDEAA00CD5559 /* DINPro-Bold.otf in Resources */,
+				FF8F17BF209CDEAA00CD5559 /* DINPro-Light.otf in Resources */,
+				FF8F17BA209CDE5400CD5559 /* DINPro-Medium.otf in Resources */,
+				FF8F17B8209CDC2F00CD5559 /* DINPro-Regular.otf in Resources */,
 				FF0CC52A209A295E0042079C /* LaunchScreen.storyboard in Resources */,
 				FF0CC527209A295E0042079C /* Assets.xcassets in Resources */,
 				FF0CC525209A295E0042079C /* Main.storyboard in Resources */,

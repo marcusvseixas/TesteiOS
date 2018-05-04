@@ -21,8 +21,16 @@ class InvestimentoViewController: UIViewController, InvestimentoDisplayLogic
 {
   var interactor: InvestimentoBusinessLogic?
   var router: (NSObjectProtocol & InvestimentoRoutingLogic & InvestimentoDataPassing)?
-
-  // MARK: Object lifecycle
+  let fundLink = "https://floating-mountain-50292.herokuapp.com/fund.json"
+  var fundArray: NSDictionary = [:]
+  @IBOutlet weak var titleLabel: UILabel?
+  @IBOutlet weak var fundNameLabel: UILabel!
+  @IBOutlet weak var whatIsLabel: UILabel!
+  @IBOutlet weak var definitionLabel: UILabel!
+    @IBOutlet weak var riskTitleLabel: UILabel!
+    @IBOutlet weak var riskLabel: UILabel!
+    @IBOutlet weak var infoTitleLabel: UILabel!
+    // MARK: Object lifecycle
   
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
   {
@@ -50,7 +58,7 @@ class InvestimentoViewController: UIViewController, InvestimentoDisplayLogic
     presenter.viewController = viewController
     router.viewController = viewController
     router.dataStore = interactor
-   
+    getJsonFromUrl()
     }
   // MARK: Routing
   
@@ -69,6 +77,7 @@ class InvestimentoViewController: UIViewController, InvestimentoDisplayLogic
   override func viewDidLoad()
   {
     super.viewDidLoad()
+    //self.titleLabel?.text = "test"
     doSomething()
   }
   
@@ -78,16 +87,35 @@ class InvestimentoViewController: UIViewController, InvestimentoDisplayLogic
   
   func doSomething()
   {
+    //getJsonFromUrl()
+    
     let request = Investimento.Something.Request()
     interactor?.doSomething(request: request)
   }
   
-    @IBOutlet weak var titleLabel: UILabel!
+    
     func displaySomething(viewModel: Investimento.Something.ViewModel)
   {
     //nameTextField.text = viewModel.name
-   
-    
-    
+    self.titleLabel?.text = fundArray.value(forKey: "title") as? String
+    self.fundNameLabel.text = fundArray.value(forKey: "fundName") as? String
+    self.whatIsLabel.text = fundArray.value(forKey: "whatIs") as? String
+    self.definitionLabel.text = fundArray.value(forKey: "definition") as? String
+    self.riskTitleLabel.text = fundArray.value(forKey: "riskTitle") as? String
+    self.riskLabel.text = fundArray.value(forKey: "risk") as? String
+    self.infoTitleLabel.text = fundArray.value(forKey: "infoTitle") as? String
   }
+    
+    func getJsonFromUrl(){
+        //creating a NSURL
+        let url = NSURL(string: fundLink)
+        
+        //fetching the data from the url
+        URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
+            
+            if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
+                self.fundArray = jsonObj!.value(forKey: "screen")! as! NSDictionary
+            }
+        }).resume()
+    }
 }

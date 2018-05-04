@@ -15,6 +15,13 @@ import UIKit
 enum Investimento
 {
   // MARK: Use cases
+    enum type: Int{
+        case field = 1
+        case text = 2
+        case image = 3
+        case checkbox = 4
+        case send = 5
+    }
   
   enum Something
   {
