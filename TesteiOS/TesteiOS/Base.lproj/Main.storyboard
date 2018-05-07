@@ -210,7 +210,7 @@
                                     <constraint firstAttribute="width" constant="300" id="brC-78-wvi"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyo-QZ-xGg" userLabel="email">
@@ -225,13 +225,13 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dC3-q8-Woy">
                                 <rect key="frame" x="37" y="328.5" width="300" height="30"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LIu-UH-h9e">
                                 <rect key="frame" x="37" y="247.5" width="300" height="30"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sc0-al-JXS" customClass="CCheckbox" customModule="TesteiOS" customModuleProvider="target">
@@ -251,12 +251,28 @@
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UnI-na-Lgu">
+                                <rect key="frame" x="30" y="450" width="315" height="50"/>
+                                <color key="backgroundColor" red="0.91624838080000004" green="0.21004019460000001" blue="0.1780187177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="57a-ee-PWZ"/>
+                                    <constraint firstAttribute="width" constant="315" id="FqQ-uQ-50S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="17"/>
+                                <state key="normal" title="send">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="J0Q-zu-wBb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="OmJ-8P-9gG" firstAttribute="top" secondItem="dC3-q8-Woy" secondAttribute="bottom" constant="39.5" id="2p1-MZ-D63"/>
                             <constraint firstItem="R9U-d1-y5Q" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="8vX-jg-8q9"/>
                             <constraint firstItem="fvN-d5-AMz" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="BRp-Wn-2ql"/>
+                            <constraint firstItem="UnI-na-Lgu" firstAttribute="top" secondItem="OmJ-8P-9gG" secondAttribute="bottom" constant="30" id="D23-GP-cRy"/>
                             <constraint firstItem="LIu-UH-h9e" firstAttribute="leading" secondItem="nH8-vd-ngz" secondAttribute="leading" id="E0V-yc-eBL"/>
                             <constraint firstItem="OmJ-8P-9gG" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" constant="18.5" id="F0l-gD-ZpH"/>
                             <constraint firstItem="nH8-vd-ngz" firstAttribute="top" secondItem="fvN-d5-AMz" secondAttribute="bottom" constant="24" id="Har-m7-2SH"/>
@@ -276,6 +292,7 @@
                             <constraint firstItem="KFw-59-KL6" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" constant="-64" id="kel-4j-Dls"/>
                             <constraint firstItem="nyo-QZ-xGg" firstAttribute="leading" secondItem="LIu-UH-h9e" secondAttribute="leading" id="lcC-v5-eea"/>
                             <constraint firstItem="LIu-UH-h9e" firstAttribute="top" secondItem="nH8-vd-ngz" secondAttribute="bottom" constant="8.5" id="rLD-1v-ysB"/>
+                            <constraint firstItem="UnI-na-Lgu" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="vN6-qy-IyP"/>
                             <constraint firstItem="KFw-59-KL6" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" constant="-64" id="xNT-5s-oZH"/>
                             <constraint firstItem="nyo-QZ-xGg" firstAttribute="top" secondItem="LIu-UH-h9e" secondAttribute="bottom" constant="21" id="xkK-Wd-8NY"/>
                         </constraints>
@@ -299,6 +316,7 @@
                         <outlet property="nameLabel" destination="KFw-59-KL6" id="0FD-F6-z5m"/>
                         <outlet property="nameMessageLabel" destination="R9U-d1-y5Q" id="dz5-MD-IPM"/>
                         <outlet property="nameTextField" destination="fvN-d5-AMz" id="X07-K0-QZ2"/>
+                        <outlet property="sendButtonOutlet" destination="UnI-na-Lgu" id="gpb-vg-7bX"/>
                         <outlet property="telephoneLabel" destination="nyo-QZ-xGg" id="SWr-tT-hWk"/>
                         <outlet property="telephoneTextField" destination="dC3-q8-Woy" id="2gz-ki-nEL"/>
                     </connections>
