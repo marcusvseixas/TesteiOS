@@ -16,6 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "DINPro-Medium", size: 17)!, NSAttributedStringKey.foregroundColor: UIColor.white], for: .normal )
+        //UITabBar.appearance().isTranslucent = false
+        //UITabBar.appearance().barTintColor = UIColor.red
+        //UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "DINPro-Medium", size: 17)!, NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.backgroundColor: UIColor.red], for: .normal)
+        
+        //UITabBar.appearance().tintColor = UIColor.yellow
+
+
+        UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -13)
         return true
     }
 

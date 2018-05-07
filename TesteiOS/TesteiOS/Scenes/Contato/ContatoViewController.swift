@@ -21,9 +21,19 @@ class ContatoViewController: UIViewController, ContatoDisplayLogic
 {
   var interactor: ContatoBusinessLogic?
   var router: (NSObjectProtocol & ContatoRoutingLogic & ContatoDataPassing)?
-
-  // MARK: Object lifecycle
-  
+  let formLink = "https://floating-mountain-50292.herokuapp.com/cells.json"
+    var formDict = [NSDictionary]()
+    @IBOutlet weak var nameMessageLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var telephoneLabel: UILabel!
+    @IBOutlet weak var telephoneTextField: UITextField!
+    @IBOutlet weak var addEmailCheckBox: CCheckbox!
+    @IBOutlet weak var addEmailLabel: UILabel!
+    // MARK: Object lifecycle
+    
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
   {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -50,6 +60,9 @@ class ContatoViewController: UIViewController, ContatoDisplayLogic
     presenter.viewController = viewController
     router.viewController = viewController
     router.dataStore = interactor
+    self.tabBarItem = UITabBarItem(title: "Contato", image: nil, selectedImage: nil)
+    getJsonFromUrl()
+
   }
   
   // MARK: Routing
@@ -69,21 +82,69 @@ class ContatoViewController: UIViewController, ContatoDisplayLogic
   override func viewDidLoad()
   {
     super.viewDidLoad()
+    addEmailCheckBox.delegate = self
+    self.addEmailCheckBox.normalImage = UIImage(named: "ic_checkbox_empty")
+    self.addEmailCheckBox.selectedImage = UIImage(named: "ic_checkbox_selected")
     doSomething()
   }
-  
+    
   // MARK: Do something
   
   //@IBOutlet weak var nameTextField: UITextField!
   
   func doSomething()
   {
+    
     let request = Contato.Something.Request()
     interactor?.doSomething(request: request)
   }
   
   func displaySomething(viewModel: Contato.Something.ViewModel)
   {
+    
+    self.nameMessageLabel?.text = self.formDict[0].value(forKey: "message") as? String
+    self.nameLabel?.text = self.formDict[1].value(forKey: "message") as? String
+    self.nameTextField.setBottomBorder()
+    self.emailLabel?.text = self.formDict[2].value(forKey: "message") as? String
+    self.emailTextField.setBottomBorder()
+    self.telephoneLabel?.text = self.formDict[3].value(forKey: "message") as? String
+    self.telephoneTextField.setBottomBorder()
+    self.addEmailLabel?.text = self.formDict[4].value(forKey: "message") as? String
     //nameTextField.text = viewModel.name
   }
+  func getJsonFromUrl(){
+        //creating a NSURL
+        let url = NSURL(string: formLink)
+        
+        //fetching the data from the url
+        URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
+            
+            if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
+                self.formDict = jsonObj!.value(forKey: "cells")! as! [NSDictionary]
+            }
+        }).resume()
+    }
+    
+}
+extension UITextField {
+    func setBottomBorder() {
+        self.borderStyle = .none
+        self.layer.backgroundColor = UIColor.white.cgColor
+        
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = UIColor.lightGray.cgColor
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        self.layer.shadowOpacity = 1.0
+        self.layer.shadowRadius = 0.0
+    }
+}
+
+extension ContatoViewController: CheckboxDelegate {
+    func didDeselect(_ checkbox: CCheckbox) {
+    
+    }
+    
+    func didSelect(_ checkbox: CCheckbox) {
+
+        }
 }

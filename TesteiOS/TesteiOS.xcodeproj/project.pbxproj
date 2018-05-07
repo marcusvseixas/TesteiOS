@@ -31,6 +31,9 @@
 		FF0CC563209A2A290042079C /* InvestimentoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CC553209A2A290042079C /* InvestimentoInteractor.swift */; };
 		FF0CC564209A2A290042079C /* InvestimentoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CC553209A2A290042079C /* InvestimentoInteractor.swift */; };
 		FF0CC565209A2A290042079C /* InvestimentoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CC553209A2A290042079C /* InvestimentoInteractor.swift */; };
+		FF68B0AD20A0975A00250CAA /* CCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68B0AC20A0975A00250CAA /* CCheckbox.swift */; };
+		FF68B0AE20A0975A00250CAA /* CCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68B0AC20A0975A00250CAA /* CCheckbox.swift */; };
+		FF68B0AF20A0975A00250CAA /* CCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68B0AC20A0975A00250CAA /* CCheckbox.swift */; };
 		FF8F17B8209CDC2F00CD5559 /* DINPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF8F17B7209CDC2E00CD5559 /* DINPro-Regular.otf */; };
 		FF8F17BA209CDE5400CD5559 /* DINPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF8F17B9209CDE5400CD5559 /* DINPro-Medium.otf */; };
 		FF8F17BE209CDEAA00CD5559 /* DINPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF8F17BC209CDEA900CD5559 /* DINPro-Bold.otf */; };
@@ -91,6 +94,7 @@
 		FF0CC551209A2A290042079C /* InvestimentoModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestimentoModels.swift; sourceTree = "<group>"; };
 		FF0CC552209A2A290042079C /* InvestimentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestimentoViewController.swift; sourceTree = "<group>"; };
 		FF0CC553209A2A290042079C /* InvestimentoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestimentoInteractor.swift; sourceTree = "<group>"; };
+		FF68B0AC20A0975A00250CAA /* CCheckbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCheckbox.swift; sourceTree = "<group>"; };
 		FF8F17B7209CDC2E00CD5559 /* DINPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Regular.otf"; sourceTree = "<group>"; };
 		FF8F17B9209CDE5400CD5559 /* DINPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Medium.otf"; sourceTree = "<group>"; };
 		FF8F17BC209CDEA900CD5559 /* DINPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Bold.otf"; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 		FF0CC51C209A295E0042079C /* TesteiOS */ = {
 			isa = PBXGroup;
 			children = (
+				FF68B0AC20A0975A00250CAA /* CCheckbox.swift */,
 				FF8F17BB209CDE5E00CD5559 /* fonts */,
 				FFE4FE0D209CA3D300AB31D6 /* Scenes */,
 				FF0CC51D209A295E0042079C /* AppDelegate.swift */,
@@ -376,6 +381,7 @@
 				FF0CC554209A2A290042079C /* InvestimentoPresenter.swift in Sources */,
 				FFE4FE18209CA42700AB31D6 /* ContatoWorker.swift in Sources */,
 				FFE4FE15209CA42700AB31D6 /* ContatoPresenter.swift in Sources */,
+				FF68B0AD20A0975A00250CAA /* CCheckbox.swift in Sources */,
 				FFE4FE24209CA42700AB31D6 /* ContatoInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,6 +402,7 @@
 				FF0CC55E209A2A290042079C /* InvestimentoModels.swift in Sources */,
 				FF0CC555209A2A290042079C /* InvestimentoPresenter.swift in Sources */,
 				FFE4FE19209CA42700AB31D6 /* ContatoWorker.swift in Sources */,
+				FF68B0AE20A0975A00250CAA /* CCheckbox.swift in Sources */,
 				FFE4FE1C209CA42700AB31D6 /* ContatoRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +423,7 @@
 				FF0CC55F209A2A290042079C /* InvestimentoModels.swift in Sources */,
 				FF0CC556209A2A290042079C /* InvestimentoPresenter.swift in Sources */,
 				FFE4FE1A209CA42700AB31D6 /* ContatoWorker.swift in Sources */,
+				FF68B0AF20A0975A00250CAA /* CCheckbox.swift in Sources */,
 				FFE4FE1D209CA42700AB31D6 /* ContatoRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
